@@ -17,7 +17,7 @@ class App extends React.Component {
                 "name": "The Matrix Reloaded",
                 "rating": "6.9",
                 "imageURL": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/jBegA6V243J6HUnpcOILsRvBnGb.jpg",
-                "overview": "Six months after the events depicted in The Matrix, Neo has proved to be a good omen for the free humans, as more and more humans are being freed from the matrix and brought to Zion, the one and only stronghold of the Resistance. Neo himself has discovered his superpowers including super speed, ability to see the codes of the things inside the matrix and a certain degree of pre-cognition.",
+                "overview": "Six months after the events depicted in The Matrix, Neo has proved to be a good omen for the free humans, as more and more humans are being freed from the matrix and brought to Zion, the one and only stronghold of the Resistance.",
                 "id": 8
               },
               {
@@ -35,9 +35,13 @@ class App extends React.Component {
              m => m.id !== movie.id
          )
          
-         this.setState({
+        /*  this.setState({
              movies: newMovieList
-         })
+         }) */
+
+         this.setState(state => ({
+             movies: newMovieList
+         }))
 
 
     }
@@ -47,7 +51,7 @@ class App extends React.Component {
             <div className="container">
                 <div className="row">
                    <div className="col-lg-12">
-                      
+                      <SearchBar />
                    </div>
                 </div>
 
