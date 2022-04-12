@@ -19,7 +19,7 @@ const MovieList = (props) => {
               <p className="card-text">{movie.overview}</p>
               <div className="d-flex justify-content-between align-items-center">
                 <button type="button" onClick={(event) => props.deleteMovieProp(movie)} className="btn btn-md btn-outline-danger">
-                  Delete
+                  Delet
                 </button>
                 <h2>
                   <span className="badge bg-info">{movie.rating}</span>
