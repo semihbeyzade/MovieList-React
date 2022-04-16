@@ -1,42 +1,40 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-class SearchBar extends React.Component{
+class SearchBar extends React.Component {
 
-    
 
-    handleFormSubmit = (event) =>{
-        event.preventDefault()
+    handleFormSubmit = (event) => {
+        event.preventDefault();
     }
 
     render() {
-        return(
 
-<<<<<<< HEAD
+        return  (
             <form onSubmit={this.handleFormSubmit}>
-                <div className='form-row mb-5 mt-3 d-flex'>
-                    <div className='col-10'>
-=======
-            <form onSubmit={this.handleFormSubmit} className='mt-3'>
-                <div className='form-row mb-5'>
-                    <div className='col-12'>
->>>>>>> a2ecb0a8b3c7f68e4e87943c8095d8bcd442f3f2
+                <div className="form-row mb-5">
+                    <div className="col-10">
                         <input 
-                           onChange={this.props.searchMovieProp} 
-                           className='form-control' placeholder='Seach a movie' 
-                           type='text'
-                           
+                        
+                            onChange={this.props.searchMovieProp} 
+                            type="text" className="form-control" 
+                            placeholder="Seach a movie" 
                         />
                     </div>
-                    <div className='col-2 '>
-                        <button type='button'
-                                className='btn btn-md btn-danger float-end'>Add Movie
-                        </button>
+                    <div className="col-2">
+                        <Link
+                                to="/add"
+                                type="button" 
+                                className="btn btn-md btn-danger"
+                                style={{float:'right'}}>Add Movie
+                        </Link>
                     </div>
                 </div>
             </form>
-        
-        )     
+        )
+
     }
 }
+
 
 export default SearchBar;
