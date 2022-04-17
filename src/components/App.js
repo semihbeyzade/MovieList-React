@@ -37,7 +37,7 @@ class App extends React.Component {
     }
 
 
-    // SEARCH MOVIE
+    // SEARCH
     searchMovie = (event) => {
         this.setState({ searchQuery: event.target.value })
     }
